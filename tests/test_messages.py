@@ -28,3 +28,14 @@ def test_days_late_is_shown():
     overdue = [Loan("Lee", "lee@example.com", "Book D", date(2026, 10, 1), None)]
     reminders, _ = build_reminders(overdue, TODAY)
     assert "3일 지남" in reminders[0].body
+
+
+def test_shared_email_different_members_get_separate_reminders():
+    overdue = [
+        Loan("김은혜", "kim.family@example.com", "Book A", date(2026, 9, 20), None),
+        Loan("김요한", "kim.family@example.com", "Book B", date(2026, 9, 25), None),
+    ]
+    reminders, _ = build_reminders(overdue, TODAY)
+    assert len(reminders) == 2
+    names = sorted(r.member_name for r in reminders)
+    assert names == ["김요한", "김은혜"]

@@ -16,11 +16,12 @@ class Reminder:
     body: str
 
 
-def group_by_member(overdue: list[Loan]) -> dict[str, list[Loan]]:
-    """Key by email (lowercase) so two rows for the same person become one email."""
-    groups: dict[str, list[Loan]] = {}
+def group_by_member(overdue: list[Loan]) -> dict[tuple[str, str], list[Loan]]:
+    """Key by (email, name) so one person's books become one email,
+    while family members who share an email still get separate emails."""
+    groups: dict[tuple[str, str], list[Loan]] = {}
     for loan in overdue:
-        key = loan.email.lower()
+        key = (loan.email.lower(), loan.member_name.strip())
         groups.setdefault(key, []).append(loan)
     return groups
 

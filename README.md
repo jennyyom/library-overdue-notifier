@@ -49,6 +49,7 @@ The tests cover the edge cases that matter most:
 - A book due **today** is not overdue yet
 - Returned books are never reminded
 - Two books for the same person (even with different email capitalization) become **one** email
+- Family members who **share one email address** each get their own reminder
 - Members **without an email** go to a manual contact list instead
 - Nobody is reminded twice within 7 days, even after the program restarts
 - A row with a bad date is reported and skipped instead of crashing the run
