@@ -1,0 +1,8 @@
+member_name,email,book_title,due_date,returned_date
+김은혜,grace.kim@example.com,순전한 기독교,2026-09-20,
+김은혜,grace.kim@example.com,하나님의 모략,2026-09-25,
+이요셉,joseph.lee@example.com,팀 켈러의 기도,2026-10-04,
+박소망,hope.park@example.com,천로역정,2026-09-15,2026-09-30
+최믿음,,예수님처럼,2026-09-01,
+정사랑,love.jung@example.com,고백록,2026-10-10,
+한기쁨,joy.han@example.com,잘못된 날짜 예시,not-a-date,

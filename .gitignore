@@ -1,0 +1,11 @@
+# Who we emailed and when (contains real email addresses)
+sent_log.json
+
+# Real exports from the library program contain members' personal information.
+# Only the made-up sample file is committed.
+data/*
+!data/sample_loans.csv
+
+__pycache__/
+.pytest_cache/
+.env

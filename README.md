@@ -64,4 +64,3 @@ The tests cover the edge cases that matter most:
 - [ ] (Optional) Text message reminders for members who opt in
 
 `data/sample_loans.csv` contains made-up names only.
-# library-overdue-notifier
