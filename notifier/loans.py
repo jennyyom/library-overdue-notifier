@@ -67,6 +67,8 @@ def read_loans_from_csv(path: str) -> tuple[list[Loan], list[str]]:
     return loans, problems
 
 
+# today is passed in instead of calling date.today(),
+# so tests can use a fixed date and always get the same result.
 def find_overdue(loans: list[Loan], today: date) -> list[Loan]:
     """A loan is overdue if it is not returned and the due date has passed.
 
